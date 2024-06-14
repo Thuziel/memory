@@ -18,11 +18,16 @@ function updateDOM() {
             timestamp.textContent = entries[i][1];
 
             const deleteBtn = document.createElement("button");
-            deleteBtn.textContent = "Delete";
+            const delImg = document.createElement("img");
+            delImg.setAttribute("class", "delImg");
+            delImg.setAttribute("src", "media/delete.png");
+            deleteBtn.setAttribute("class", "delBtn");
+            deleteBtn.appendChild(delImg);
 
             const hr = document.createElement("hr");
 
             const content = document.createElement("p");
+            content.setAttribute("class", "content")
             content.textContent = entries[i][2];
 
             const div = document.createElement("div", );

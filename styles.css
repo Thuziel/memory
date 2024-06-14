@@ -57,7 +57,20 @@ main {
 .postHeader {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-weight: bold;
+}
+
+.delBtn {
+    display: flex;
+    align-items: center;
+    padding: 4px 0 4px 24px;
+    background-color: white;
+    border: none;
+}
+
+.delImg {
+    width: 18px;
 }
 
 hr {
@@ -65,3 +78,8 @@ hr {
     border-color: black;
     border-radius: 5px;
 }
+
+.content {
+    padding: 0 4px;
+}
+
