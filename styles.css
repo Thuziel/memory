@@ -8,7 +8,7 @@
 html, body {
     width: 100%;
     height: 100%;
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(255, 255, 255);
 }
 
 main {
@@ -22,6 +22,7 @@ main {
     border: none;
     border-radius: 5px;
     font-size: 18px;
+    border: 1px solid black;
 }
 
 #saveBtn {
@@ -29,10 +30,11 @@ main {
     padding: 18px;
     font-size: 24px;
     font-weight: bold;
-    background-color: white;
+    background-color: rgb(240, 240, 240);
     border: none;
     border-radius: 5px;
     margin-top: 10px;
+    border: 1px solid black;
 }
 
 .post {
@@ -43,6 +45,7 @@ main {
     background-color: white;
     font-size: 18px;
     border-radius: 5px;
+    border: 1px solid black;
 
 }
 
