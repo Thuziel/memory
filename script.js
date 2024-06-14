@@ -27,9 +27,14 @@ function updateDOM() {
 
             const div = document.createElement("div", );
             div.setAttribute("id", entries[i][0]); 
+            div.setAttribute("class", "post");
 
-            div.appendChild(timestamp);
-            div.appendChild(deleteBtn);
+            const headerDiv = document.createElement("div");
+            headerDiv.setAttribute("class", "postHeader");
+
+            headerDiv.appendChild(timestamp);
+            headerDiv.appendChild(deleteBtn);
+            div.appendChild(headerDiv);
             div.appendChild(hr);
             div.appendChild(content);
             container.appendChild(div);
@@ -80,17 +85,11 @@ saveBtn.addEventListener("click", () => {
         }
     }
     updateDOM();
+    userInput.value = '';
+    userInput.focus();
 });
 
-const clear = document.querySelector("#clear");
-clear.addEventListener("click", () => {
-    localStorage.clear();
-    clearDOM();
-    const container = document.createElement("div");
-    container.setAttribute("id", "container");
-    const htmlContent = document.querySelector("#memories");
-    htmlContent.appendChild(container);
-});
+localStorage.clear();
 
 //event listener for delete button
 //remove item from localStorage
