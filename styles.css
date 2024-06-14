@@ -23,6 +23,7 @@ main {
     border-radius: 5px;
     font-size: 18px;
     border: 1px solid black;
+    padding: 10px;
 }
 
 #saveBtn {
@@ -37,8 +38,12 @@ main {
     border: 1px solid black;
 }
 
+#memories {
+    margin-top: 32px;
+}
+
 .post {
-    margin-top: 20px;
+    margin-bottom: 24px;
     white-space: pre-wrap;
     overflow-wrap: break-word;
     padding: 10px;
