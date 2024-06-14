@@ -17,6 +17,9 @@ function updateDOM() {
             const timestamp = document.createElement("p");
             timestamp.textContent = entries[i][1];
 
+            const deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "Delete";
+
             const hr = document.createElement("hr");
 
             const content = document.createElement("p");
@@ -26,6 +29,7 @@ function updateDOM() {
             div.setAttribute("id", entries[i][0]); 
 
             div.appendChild(timestamp);
+            div.appendChild(deleteBtn);
             div.appendChild(hr);
             div.appendChild(content);
             container.appendChild(div);
