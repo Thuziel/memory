@@ -26,6 +26,7 @@ main {
     margin-top: 20px;
     border: 1px solid red;
     white-space: pre-wrap;
+    overflow-wrap: break-word;
 }
 
 .postHeader {

@@ -55,7 +55,7 @@ saveBtn.addEventListener("click", () => {
                 entries.length,
                 d.getHours()+
                 ":"+
-                d.getMinutes()+
+                (d.getMinutes() < 10 ? '0' : '') + d.getMinutes()+
                 " - "+
                 d.getDate()+
                 "."+
@@ -72,7 +72,7 @@ saveBtn.addEventListener("click", () => {
                 entries.length,
                 d.getHours()+
                 ":"+
-                d.getMinutes()+
+                (d.getMinutes() < 10 ? '0' : '') + d.getMinutes()+
                 " - "+
                 d.getDate()+
                 "."+
@@ -89,7 +89,6 @@ saveBtn.addEventListener("click", () => {
     userInput.focus();
 });
 
-localStorage.clear();
 
 //event listener for delete button
 //remove item from localStorage
