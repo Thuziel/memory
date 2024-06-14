@@ -8,7 +8,7 @@
 html, body {
     width: 100%;
     height: 100%;
-    background-color: whitesmoke;
+    background-color: rgb(220, 220, 220);
 }
 
 main {
@@ -19,6 +19,9 @@ main {
     width: 100%;
     height: 200px;
     resize: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
 }
 
 #saveBtn {
@@ -51,4 +54,6 @@ main {
 
 hr {
     margin: 10px 0;
+    border-color: black;
+    border-radius: 5px;
 }
