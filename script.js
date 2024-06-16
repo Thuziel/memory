@@ -53,11 +53,11 @@ updateDOM();
 const saveBtn = document.querySelector("#saveBtn");
 saveBtn.addEventListener("click", () => {
     if(userInput.value !== '') {
-        if(localStorage.getItem("entries") !== null) {
+        if(localStorage.getItem("entries") !== null && localStorage.getItem("entries") !== "[]") {
             let entries = JSON.parse(localStorage.getItem('entries'));
             let d = new Date();
             entries.push([
-                entries.length,
+                entries[entries.length-1][0]+1,
                 d.getHours()+
                 ":"+
                 (d.getMinutes() < 10 ? '0' : '') + d.getMinutes()+
@@ -95,6 +95,12 @@ saveBtn.addEventListener("click", () => {
 });
 
 
-//event listener for delete button
-//remove item from localStorage
-//call update DOM function
+const memories = document.querySelector("#memories");
+memories.addEventListener("click", (e) => {
+    if(e.target && e.target.parentNode.classList.contains("delBtn") || e.target.classList.contains("delBtn")) {
+        let entries = JSON.parse(localStorage.getItem("entries"));
+        entries = entries.filter(entry => entry[0] != e.target.closest(".post").id);
+        localStorage.setItem("entries", JSON.stringify(entries));
+        updateDOM();
+    }
+});
